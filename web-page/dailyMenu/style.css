@@ -1,0 +1,26 @@
+@keyframes in{
+	from{
+    background-color: white;
+    color:black;
+	}
+	to{
+    background-color: blue;
+    color:white;
+	}
+}
+
+@keyframes out{
+	from{
+    background-color: blue;
+    color:white;
+	}
+	to{
+    background-color: white;
+    color:black;
+	}
+}
+
+.btn{
+  margin-bottom: 10px;
+  border: 2px solid silver;
+}
