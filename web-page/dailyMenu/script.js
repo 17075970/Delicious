@@ -1,10 +1,12 @@
-var list = ["dsa", "asd", "foskvosk"];
+var title = ["dsa", "asd", "foskvosk"];
+var disc = ["klskgsf", "pvol;rlg,", "kvpdkbskvpdkbs"];
+var pic = ["!", "food.jpg", "!"];
 
 function change(i, id){
   if(i){
     document.getElementById(id).style.animationName = "in";
     document.getElementById(id).style.animationDuration = "400ms";
-    document.getElementById(id).style.backgroundColor = "blue";
+    document.getElementById(id).style.backgroundColor = "#FACA7E";
     document.getElementById(id).style.color = "white";
   }
   else{
@@ -15,14 +17,28 @@ function change(i, id){
   }
 }
 
+function nextPage(){
+  window.location = "sample.html";
+}
+
 function upload(){
-  for(var n = 0; n < list.length; n++){
+  for(var n = 0; n < title.length; n++){
     var index = "b" + n;
 
-    var str = "<div class='btn' id='b" + n + "' onmousemove='change(true, " + '"' + index + '"' + ")' onmouseout='change(false, " + '"' + index + '"' + ")'>";
-    str += list[n];
+    var str = "<div class='meal'>";
+    str += "<button></button>"
+    str += "<div class='btn' id='b" + n + "' onclick='nextPage()' onmousemove='change(true, " + '"' + index + '"' + ")' onmouseout='change(false, " + '"' + index + '"' + ")'>";
+    str += "<img src='" + (pic[n] == "!" ? "blank.png" : pic[n]) + "' width='100px' height='100px'>";
+    str += "<div class='brief-info'>";
+    str += "<h3 id='title'>" + title[n] + "</h3>";
+    str += "<p id='disc'>" + disc[n] + "</p>";
+    str += "</div>";
+    str += "</div>";
     str += "</div>";
     document.getElementById('container').innerHTML += str;
-    console.log(str);
   }
+}
+
+function vote(){
+  console.log("asdasd");
 }

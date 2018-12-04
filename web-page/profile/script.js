@@ -23,4 +23,5 @@ function uploadID(){
 function upload(){
   document.getElementById('name').innerHTML = window.sessionStorage.getItem("name");
   document.getElementById('ID').innerHTML = window.sessionStorage.getItem("ID");
+  document.getElementById('Type').innerHTML = window.sessionStorage.getItem("Type");
 }

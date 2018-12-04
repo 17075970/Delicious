@@ -26,3 +26,7 @@
 #name-space input{
   margin-top: 15px;
 }
+
+p{
+  min-height: 23px;
+}
